@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SINCHANA – Resume</title>
+  <style>
+    /* --- Navbar --- */
+    .navbar {
+      background-color: #243447;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .navbar .logo {
+      color: white;
+      font-size: 22px;
+      font-weight: bold;
+      margin: 0;
+    }
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar li {
+      margin-left: 20px;
+    }
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 6px;
+    }
+    .navbar a.active,
+    .navbar a:hover {
+      background-color: #374f63;
+    }
+
+    /* --- Base --- */
+    :root {
+      --bg: #f7f7fb;
+      --card: #ffffff;
+      --ink: #14161a;
+      --muted: #586070;
+      --accent: #2563eb;
+      --chip: #eef2ff;
+      --rule: #e6e8ef;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: linear-gradient(180deg, var(--bg), #ffffff);
+      font: 15px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans";
+    }
+
+    /* --- Layout --- */
+    .shell {
+      max-width: 1000px;
+      margin: 32px auto;
+      padding: 0 16px;
+    }
+    .resume {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(20, 22, 26, 0.06);
+      overflow: hidden;
+    }
+
+    /* --- Header --- */
+    header {
+      padding: 28px 28px 20px;
+      background: radial-gradient(1200px 300px at 20% -50%, #dbeafe 0%, transparent 60%),
+                  radial-gradient(1200px 300px at 80% -60%, #e0e7ff 0%, transparent 60%),
+                  #fff;
+      border-bottom: 1px solid var(--rule);
+    }
+    .name {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .name h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+    .name .role {
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 16px;
+    }
+    .contact {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* --- Body grid --- */
+    .grid {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+    }
+    aside {
+      border-right: 1px solid var(--rule);
+      padding: 22px 20px;
+      background: #fafbff;
+    }
+    main {
+      padding: 22px 26px;
+    }
+
+    /* --- Section helpers --- */
+    h2 {
+      margin: 14px 0 8px;
+      font-size: 15px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    ul { margin: 8px 0 0 18px; padding: 0; }
+    li { margin: 4px 0; }
+
+    .chipset {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .chip {
+      padding: 6px 10px;
+      background: var(--chip);
+      border: 1px solid #e6eaff;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .item { margin: 14px 0 18px; }
+    .item .title { font-weight: 700; }
+    .item .meta { color: var(--muted); font-size: 14px; }
+
+    .edu {
+      display: grid;
+      gap: 12px;
+    }
+    .edu .row {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 14px;
+      padding: 10px 0;
+      border-bottom: 1px dashed var(--rule);
+    }
+    .year { font-weight: 600; color: var(--accent); }
+
+    footer {
+      border-top: 1px solid var(--rule);
+      padding: 14px 26px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* Responsive */
+    @media (max-width: 780px) {
+      .grid { grid-template-columns: 1fr; }
+      aside { border-right: 0; border-bottom: 1px solid var(--rule); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation bar -->
+  <nav class="navbar">
+    <h1 class="logo">Sinchana</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="resume.html" class="active">Resume</a></li>
+      <li><a href="biodata.html">Bio-data</a></li>
+    </ul>
+  </nav>
+
+  <!-- Resume Content -->
+  <div class="shell">
+    <article class="resume">
+      <header>
+        <div class="name">
+          <h1>SINCHANA</h1>
+          <span class="role">Computer-Science Engineer</span>
+        </div>
+        <div class="contact">
+          <span>Paneyadka House, Kanyana Post &amp; Village, Bantwal Taluk, DK-574279, Karnataka, India</span>
+         <span>✉️ sinchanapgowda24@gmail.com</span>
+         <span>🔗 <a href="https://www.linkedin.com/in/sinchana-78b080291" target="_blank">linkedin.com/in/sinchana</a></span>
+        </div>
+      </header>
+
+      <div class="grid">
+        <!-- Sidebar -->
+        <aside>
+          <section>
+            <h2>Soft Skills</h2>
+            <div class="chipset">
+              <span class="chip">Communication</span>
+              <span class="chip">Presentation</span>
+              <span class="chip">Teamwork</span>
+              <span class="chip">Problem-solving</span>
+              <span class="chip">Creativity</span>
+            </div>
+          </section>
+
+          <section>
+            <h2>Technical Skills</h2>
+            <div class="item">
+              <div class="title">Frontend</div>
+              <div class="meta">HTML</div>
+            </div>
+            <div class="item">
+              <div class="title">Backend</div>
+              <div class="meta">C, C++, Java, Python</div>
+            </div>
+          </section>
+
+          <section>
+            <h2>Languages</h2>
+            <ul>
+              <li>English</li>
+              <li>Kannada</li>
+              <li>Basic Hindi</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Member Of</h2>
+            <ul>
+              <li>CORE Club</li>
+              <li>IEEE – Mangalore Section</li>
+            </ul>
+          </section>
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+          <section>
+            <h2>Project</h2>
+            <div class="item">
+              <div class="title">Complaint Management (2025)</div>
+              <div class="meta">A Complaint Management System for Customer Service.</div>
+            </div>
+          </section>
+
+          <section>
+            <h2>Education</h2>
+            <div class="edu">
+              <div class="row">
+                <div class="year">2023–2027</div>
+                <div>
+                  <div class="title">B.E in Computer Science Engineering</div>
+                  <div class="meta">Vivekananda College of Technology (VCET)</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="year">2021–2023</div>
+                <div>
+                  <div class="title">Pre-University</div>
+                  <div class="meta">Government College, Kanyana</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="year">2018–2021</div>
+                <div>
+                  <div class="title">High-school</div>
+                  <div class="meta">Vital Jaycees English Medium School, Vitla</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2>Certifications</h2>
+            <ul>
+              <li>FOOD.PLANET.HEALTH Webinar (2025)</li>
+              <li>Data Structures and Algorithms (2025)</li>
+              <li>Hospitals Enterprise and Medical Software System (2024)</li>
+              <li>Junior in Classical Dance (2018)</li>
+              <li>Junior in Carnatic Music (2020)</li>
+            </ul>
+          </section>
+        </main>
+      </div>
+
+      <footer>
+        © <span id="year"></span> SINCHANA — Resume
+      </footer>
+    </article>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

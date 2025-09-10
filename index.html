@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sinchana | Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: rgba(36, 52, 71, 0.9);
+      padding: 15px;
+      display: flex;
+      justify-content: flex-end;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 10;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar li {
+      margin-left: 20px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    .navbar a.active, .navbar a:hover {
+      background-color: #374f63;
+    }
+
+    /* Animated Gradient Background */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      color: white;
+      background: linear-gradient(-45deg, #ff512f, #dd2476, #24c6dc, #5433ff);
+      background-size: 400% 400%;
+      animation: gradientShift 12s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Profile Image */
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 4px solid white;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      margin-bottom: 20px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .profile-img:hover {
+      transform: scale(1.08);
+    }
+
+    /* Hero Text */
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 2s ease forwards;
+    }
+
+    .hero h2 {
+      font-size: 1.8rem;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 2s ease forwards 1s;
+    }
+
+    .hero span {
+      color: gold;
+      text-shadow: 0 0 10px rgba(255, 215, 0, 0.8),
+                   0 0 20px rgba(255, 215, 0, 0.6),
+                   0 0 30px rgba(255, 215, 0, 0.4);
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px gold; }
+      to { text-shadow: 0 0 25px yellow; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="biodata.html"> Bio-data </a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <!-- Profile Photo -->
+    <img src="profile.jpg" alt="Sinchana Photo" class="profile-img">
+    <!-- Text -->
+    <h1>Hello, Welcome to my Website!!</h1>
+    <h2>I'm <span><b>Sinchana</b></span></h2>
+  </section>
+</body>
+</html>
